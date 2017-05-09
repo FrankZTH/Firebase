@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    document
+  </title>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDbUm04_jL7fLN5n54nd7D79UgV0aZNUhM",
+      authDomain: "test-855fd.firebaseapp.com",
+      databaseURL: "https://test-855fd.firebaseio.com",
+      projectId: "test-855fd",
+      storageBucket: "test-855fd.appspot.com",
+      messagingSenderId: "1019650115190"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <div>
+    <form>
+      <fieldset>
+        <legend>USER INFO UPDATE</legend>
+        <p>
+          <label for="username">User Name</label>
+          <input type="text" name="username" id="username" ,required>
+        </p>
+        <p>
+          <label for="job">Job</label>
+          <input type="text" name="job" id="job" ,required>
+        </p>
+        <p>
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" ,required>
+        </p>
+        <p>
+          <label for="photo">Photo</label>
+          <input type="file" name="photo" id="photo" ,required>
+          <input type="url" name="photoUrl" id="photoUrl" readonly/>
+        </p>
+        <p>
+          <label for="descriptions">Descriptions</label>
+          <textarea name="text" name="descriptions" id="descriptions" rows="8" cols="80"></textarea>
+        </p>
+        <p>
+          <button type="button" onclick="updateInfo(this.form)">UPDATE</button>
+
+        </p>
+      </fieldset>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/javascript.js">
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    document
+  </title>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDbUm04_jL7fLN5n54nd7D79UgV0aZNUhM",
+      authDomain: "test-855fd.firebaseapp.com",
+      databaseURL: "https://test-855fd.firebaseio.com",
+      projectId: "test-855fd",
+      storageBucket: "test-855fd.appspot.com",
+      messagingSenderId: "1019650115190"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <div>
+    <fieldset>
+      <legend>CHAT ROOM</legend>
+      <div id="messagelist"></div>
+      <form onsubmit="sendMessage(this);return false">
+        <input type="text" name="message">
+        <button type="submit">SEND</button>
+      </form>
+  </div>
+  <script type="text/javascript" src="js/javascript.js">
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    document
+  </title>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDbUm04_jL7fLN5n54nd7D79UgV0aZNUhM",
+      authDomain: "test-855fd.firebaseapp.com",
+      databaseURL: "https://test-855fd.firebaseio.com",
+      projectId: "test-855fd",
+      storageBucket: "test-855fd.appspot.com",
+      messagingSenderId: "1019650115190"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <div>
+    <form>
+      <fieldset>
+        <legend>SIGN UP/IN</legend>
+        <p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required>
+        </p>
+        <p>
+          <button type="button" name="button" onclick="signUp(this.form.email.value,this.form.password.value)">SIGN UP</button>
+          <button type="button" name="button" onclick="signIn(this.form.email.value,this.form.password.value)">SIGN IN</button>
+          <button type="button" name="button" onclick="signOut(this.form.email.value,this.form.password.value)">SIGN OUT</button>
+        </p>
+        <p>frankboygx@gmail.com</p>
+
+      </fieldset>
+    </form>
+  </div>
+  <div>
+    <form>
+      <fieldset>
+        <legend>USER INFO UPDATE</legend>
+        <p>
+          <label for="username">User Name</label>
+          <input type="text" name="username" id="username" ,required>
+        </p>
+        <p>
+          <label for="job">Job</label>
+          <input type="text" name="job" id="job" ,required>
+        </p>
+        <p>
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" ,required>
+        </p>
+        <p>
+          <label for="photo">Photo</label>
+          <input type="file" name="photo" id="photo" ,required>
+          <input type="url" name="photoUrl" id="photoUrl" readonly/>
+        </p>
+        <p>
+          <label for="descriptions">Descriptions</label>
+          <textarea name="text" name="descriptions" id="descriptions" rows="8" cols="80"></textarea>
+        </p>
+        <p>
+          <button type="button" onclick="updateInfo(this.form)">UPDATE</button>
+
+        </p>
+      </fieldset>
+    </form>
+  </div>
+  <div>
+    <form>
+      <fieldset>
+        <legend>USER INFO</legend>
+        <p>
+          <img src="" id="photo_e" />
+        </p>
+        <p>
+          <b>Email</b>
+          <span id="email_e"></span>
+        </p>
+        <p>
+          <b>User Name</b>
+          <span id="username_e"></span>
+        </p>
+        <p>
+          <b>Job</b>
+          <span id="job_e"></span>
+        </p>
+        <p>
+          <b>Age</b>
+          <span id="age_e"></span>
+        </p>
+        <p>
+          <b>Descriptions</b>
+          <span id="descriptions_e"></span>
+        </p>
+      </fieldset>
+    </form>
+  </div>
+  <div>
+    <fieldset>
+      <legend>CHAT ROOM</legend>
+      <div id="messagelist"></div>
+      <form onsubmit="sendMessage(this);return false">
+        <input type="text" name="message">
+        <button type="submit">SEND</button>
+      </form>
+  </div>
+  <script type="text/javascript" src="js/javascript.js">
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</body>
+
+</html>

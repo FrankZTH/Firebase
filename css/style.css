@@ -1,0 +1,16 @@
+#messageList{
+  overflow-y: scroll;
+  height: 200px;
+}
+legend{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+p{
+  font-family: Roboto;
+    font-size: 120%;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
